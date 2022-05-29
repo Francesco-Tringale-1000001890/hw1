@@ -1,0 +1,323 @@
+
+header{
+
+  color:white;
+  background-image: url(sfondo_marvel.jpg) ;
+  background-size: cover; 
+  background-position: center;
+  height: 600px;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#overlay {
+background-color: rgba(0, 0, 0, 0.706);
+position: absolute;
+top:0;
+bottom: 0;
+height: 100%;
+width: 100%;
+}
+
+header h1{
+ font-family: 'Fredericka the Great', sans-serif; 
+ font-size: 80px;
+font-weight: normal;
+text-align: center;
+font-style: normal;
+z-index: 1;
+text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; /*effetto shadow*/
+}
+
+header nav{
+position:absolute;  /* così gli offset si riferiscono ad header */
+top: 0;
+left: 0;
+right: 0; 
+font-size: 18px;
+padding: 20px;
+} 
+
+#collegamenti {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+
+
+#collegamenti a{
+font-weight: bold;
+font-size: 28px;
+border-radius: 100px;
+padding: 5px 16px;
+background-color: black;
+color: red;
+border: 3px solid whitesmoke;
+cursor:pointer;
+text-decoration: none; /*per togliere la sottolineatura dei link*/
+}
+
+#collegamenti a:hover{
+  color: yellow;
+  background-color: rgba(0, 2, 58, 0.81) ; 
+}
+
+header form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 150px;
+}
+#content{
+ 
+  font-size: 25px;
+  border-radius: 70px;
+  height: 30px;
+  width: 900px;
+  z-index: 1;
+  padding: 10px;
+}
+#submit{
+  background-color: rgb(0, 102, 255);
+  height: 54px;
+  border-radius: 70px;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  border-color: black;
+}
+#submit:hover{
+  cursor: pointer;
+  background-color: rgba(0, 102, 255, 0.41);
+}
+
+
+
+.loading h1{
+  animation-name: animation_load;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes animation_load{
+  from {
+    margin-left: 0%;
+    color: red;
+    font-size: 14px;
+  }
+  to{
+    color: green;
+    margin-left: 45%;
+    font-size: 45px;
+  }
+}
+#menu div{ /*Layout menu tendina per mobile*/
+width: 25px;
+height: 3px;
+background-color: white;
+margin: 5px 0px;
+}
+
+#menu{
+display: none; /*Per nascondere il menu a tendina quando non sono in visualizzazione mobile*/
+}
+
+body{
+margin: 0px;
+background-color:black;
+}
+
+footer{
+font-family: 'IBM Plex Sans Arabic', sans-serif;
+
+background-image: url(Marvel.jpg);
+background-size:  cover; 
+background-repeat: no-repeat;
+background-position: center;
+padding: 75px;
+text-align: center;
+opacity: 0.9;
+height: 20vh;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+footer address{
+font-size: 16px;
+color: white;
+z-index: 1;
+}
+
+footer p{
+font-size: 12px;
+color: white;
+z-index: 1;
+}
+
+p{
+  line-height: normal;
+  font-size: 16px;
+  text-align: center;
+   font-style: oblique; 
+   color: rgba(128, 128, 128, 0.701);
+}
+#comics_view{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+#comics_view h1{
+  color:rgb(0, 251, 255);
+}
+
+#comics_view em{
+  color: yellow;
+}
+
+#comics_view .comicsstyle{ 
+  margin:10px;
+  border: 6px solid slategray;
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2s, transform 3s ;
+}
+.copertina_comics{
+width: 250px;
+height: 250px;
+}
+
+#comics_view .comicsstyle:hover{
+  /*background-color: rgba(0, 100, 0, 0.169);*/
+  background-color: rgba(0, 128, 0, 0.23);
+  border: 6px solid green ;
+  transform: rotate(-4deg);
+}
+#comics_view_error .errorstyle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.unlikebutton {
+    width: 50px;
+    height: 50px;
+}
+
+#comics_view_error .errorstyle h1 {
+  color:red ;
+  font-size: 30px;
+}
+#comics_view_error .errorstyle img{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+@media(max-width:500px) {
+
+header h1{
+  font-size: 3.75em;
+}
+
+#content {
+  font-size: 8px;
+  height: 15px;
+  width: 200px;
+  padding: 10px;
+}
+#submit {
+  height: 38px;
+  font-weight: bold;
+  font-size: 8px;
+  padding: 10px;
+}
+#collegamenti a{
+display: none;
+}
+
+#menu{
+display: block;
+}
+ 
+
+
+footer address{
+  font-size: 18px;
+}
+footer p{
+  font-size: 13px;
+}
+p{
+  font-size: 14px;
+}
+
+}
+
+@media(max-width:1000px) { /*Per gestire se restringo la finestra*/
+header h1{
+  font-size: 3em;
+}
+
+header h1 em {
+font-size: 1.5em;
+}
+#search_comics{
+  width: 300px;
+}
+#content {
+  font-size: 7px;
+  height: 15px;
+  width: 200px;
+  padding: 10px;
+}
+#submit {
+  height: 38px;
+  font-weight: bold;
+  font-size: 8px;
+  padding: 10px;
+}
+
+#collegamenti a{
+font-size: 1em;
+}
+
+h1 a.button{
+font-size: 1em ;
+}
+
+h2{
+  font-size: 1em;
+  margin-top: -15px;
+}
+
+
+p{
+  font-size: 14px;
+}
+
+}
+

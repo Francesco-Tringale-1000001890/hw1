@@ -1,0 +1,215 @@
+header{
+
+    color:white;
+    background-image: url(sfondo_profilo_likes.jpg) ;
+    background-size:  contain; 
+    background-repeat: repeat;
+    height: 600px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #overlay {
+  background-color: rgba(0, 0, 0, 0.706);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  }
+
+  header h1{
+    font-family: 'Fredericka the Great', sans-serif; 
+    font-size: 80px;
+   font-weight: normal;
+   text-align: center;
+   font-style: normal;
+   z-index: 1;
+   }
+   
+    h2  {
+     font-family: 'Fredericka the Great', sans-serif;
+     font-size: 45px;
+     color: cyan;
+     font-weight: normal;
+   text-align: center;
+   z-index: 1;
+   margin-top: -20px;
+   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; /*effetto shadow*/
+   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); /*per il riflesso della scritta*/
+   }
+   
+   header nav{
+   position:absolute;  /* così gli offset si riferiscono ad header */
+   top: 0;
+   left: 0;
+   right: 0; 
+   font-size: 18px;
+   padding: 20px;
+   } 
+   
+   #collegamenti {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   }
+   
+   #collegamenti a{
+   font-weight: bold;
+   font-size: 28px;
+   border-radius: 100px;
+   padding: 5px 16px;
+   background-color: black;
+   color: red;
+   border: 3px solid whitesmoke;
+   cursor:pointer;
+   text-decoration: none; /*per togliere la sottolineatura dei link*/
+   }
+   
+   #collegamenti a:hover{
+   color: yellow;
+   background-color: rgba(0, 2, 58, 0.81) ;
+    
+   }
+   
+   #menu div{ /*Layout menu tendina per mobile*/
+   width: 25px;
+   height: 3px;
+   background-color: white;
+   margin: 5px 0px;
+   }
+   
+   #menu{
+   display: none; /*Per nascondere il menu a tendina quando non sono in visualizzazione mobile*/
+   }
+
+  
+form{
+  z-index: 1;
+  margin-top: 80px;
+}
+    #mostra_comics{
+      
+      background-color: rgba(0, 2, 58, 0.81) ;
+    color: white;
+    border-radius: 10px ;
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid white;
+    padding: 3px;
+    width: 500px;
+    z-index: 1;
+}
+#mostra_comics:hover{
+  cursor: pointer;
+  color: rgba(0, 2, 58, 0.81) ;
+  background-color: white;
+}
+
+body{
+  margin: 0px;
+  background-color:black;
+  }
+
+p{
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+     font-style: oblique; 
+     color: rgba(128, 128, 128, 0.701);
+}
+#comics_view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    
+#comics_view h1{
+  color:rgb(0, 251, 255);
+}
+    
+#comics_view em{
+    color: yellow;
+}
+    
+#comics_view .comicsstyle{ 
+    margin:10px;
+    border: 6px solid slategray;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 2s, transform 3s ;
+}
+.copertina_comics{
+  width: 250px;
+  height: 250px;
+  }
+  
+  #comics_view .comicsstyle:hover{
+    background-color: rgba(255, 0, 0, 0.184);
+    border:6px solid red;
+    transform: rotate(-4deg);
+  }
+  #comics_view_error .errorstyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .unlikebutton {
+      width: 50px;
+      height: 50px;
+  }
+  
+  #comics_view_error .errorstyle h1 {
+    color:red ;
+    font-size: 30px;
+  }
+  #comics_view_error .errorstyle img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  @media(max-width:500px) {
+    header h1{ 
+      font-size: 40px;
+     }
+     
+      h2  {
+       font-family: 'Fredericka the Great', sans-serif;
+       font-size: 30px;
+      
+     }
+
+     #mostra_comics{
+       width: 300px;
+     }
+     #collegamenti a{
+      display: none;
+      }
+      
+      #menu{
+      display: block;
+      }
+  }
+  
+  
+  @media(max-width:1000px) {
+    header h1{ 
+      font-size: 40px;
+     }
+     
+      h2  {
+       font-family: 'Fredericka the Great', sans-serif;
+       font-size: 30px;
+      
+     }
+  }
